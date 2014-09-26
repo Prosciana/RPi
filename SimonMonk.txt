@@ -1,0 +1,20 @@
+# VNC
+sudo apt-​get update
+sudo apt-get install tightvncserver -y
+vncserver :1
+# MAC AFP
+sudo apt-get install netatalk -y
+sudo apt-get install avahi-daemon -y
+sudo update-rc.d avahi-daemon defaults
+sudo nano /etc/avahi/services/afpd.service
+# Paste
+# <?xml version=“1.0” standalone='no'?><!--*-nxml-*-->
+# <!DOCTYPE service-​group SYSTEM “avahi-​service.dtd”>
+# <service-​group>
+#       <name replace-​wildcards=“yes”>%h</name>
+#       <service>
+#       <type>_afpovertcp._tcp</type>
+#       <port>548</port>
+#       </service>
+# </service-​group>
+sudo /etc/init.d/avahi-daemon restart
