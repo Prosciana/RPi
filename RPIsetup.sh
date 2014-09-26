@@ -33,3 +33,4 @@ cd ino
 sudo python setup.py install
 sudo apt-get install picocom -y
 cd
+# EOF
