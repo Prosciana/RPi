@@ -27,7 +27,7 @@ sudo halt
 
 # netatalk & VNC
 sudo apt-get update
-sudo apt-get install tightvncserver -y
+sudo apt-get install netatalk tightvncserver -y
 vncserver :1
 
 
